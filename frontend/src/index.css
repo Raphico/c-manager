@@ -1,0 +1,171 @@
+*
+{
+  box-sizing: border-box;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+:root
+{
+  --dominant-color: #eee;
+  --complementary-color: #333;
+  --accent-color: #00c6cf;
+  --white: #fff;
+}
+
+body
+{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dominant-color);
+  color: var(--complementary-color);
+}
+
+
+.container
+{
+  max-width: 650px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.flex
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header
+{
+  margin-bottom: 50px;
+}
+
+.logo
+{
+  color: var(--complementary-color);
+  text-decoration: none;
+}
+
+.accent
+{
+  color: var(--accent-color);
+}
+
+.text-center
+{
+  text-align: center;
+}
+
+.contact
+{
+  background-color: var(--white);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 0 10px;
+  max-height: 80px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.contact input
+{
+  display: block;
+  border: 0;
+  background-color: #fff;
+  font-size: 15px;
+}
+
+.contact.extend
+{
+  max-height: 200px;
+}
+
+.crud
+{
+  margin-right: 15px;
+}
+
+.sms
+{
+  color: var(--accent-color);
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  background: var(--accent-color);
+  color: var(--dominant-color);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.btn:hover
+{
+  background-color: var(--white);
+  color: var(--complementary-color);
+}
+
+.btn:active
+{
+  transform: scale(0.9);
+}
+
+.loadingContainer 
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading 
+{
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin 
+{
+  0% 
+  {
+    transform: rotate(0deg);
+  }
+  100% 
+  {
+    transform: rotate(360deg);
+  }
+}
